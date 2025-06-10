@@ -7,7 +7,7 @@ from queue import Empty, Queue
 from threading import Thread
 from typing import TypeVar
 from collections.abc import Callable
-#import了很多库
+#再次测试
 from vnpy.event import Event, EventEngine
 from .app import BaseApp
 from .event import (
@@ -134,7 +134,6 @@ class MainEngine:
         self.add_engine(LogEngine)
 
         oms_engine: OmsEngine = self.add_engine(OmsEngine)
-        self.get_tick: Callable[[str], TickData | None] = oms_engine.get_tick
         self.get_order: Callable[[str], OrderData | None] = oms_engine.get_order
         self.get_trade: Callable[[str], TradeData | None] = oms_engine.get_trade
         self.get_position: Callable[[str], PositionData | None] = oms_engine.get_position

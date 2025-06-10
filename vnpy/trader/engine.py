@@ -7,7 +7,7 @@ from queue import Empty, Queue
 from threading import Thread
 from typing import TypeVar
 from collections.abc import Callable
-
+#import了很多库
 from vnpy.event import Event, EventEngine
 from .app import BaseApp
 from .event import (
